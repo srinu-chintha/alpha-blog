@@ -11,6 +11,9 @@
   </head>
 
   <body>
+  <% flash.each do |key,mesg| %>
+    <%= mesg%>
+  <%end%>
     <%= yield %>
   </body>
 </html>
