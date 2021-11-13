@@ -21,3 +21,5 @@
     <%=f.submit%>
     </p>
 <%end%>
+<%= link_to "delete",article_path(@article),method: :delete,data: {confirm: "are you sure?"} %> |
+<%= link_to "Return",articles_path%>
