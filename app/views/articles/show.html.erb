@@ -3,5 +3,5 @@
 <p><strong>description: </strong><%= @article.description%></p>
 
 <%= link_to "edit",edit_article_path(@article)%> |
-<%= link_to "delete",article_path(@article),method: :delete,data: {confirm: "are you sure?"} %> |
+<%= link_to "delete",article_path(@article),method: :DELETE,data: {confirm: "are you sure?"} %> |
 <%= link_to "Return",articles_path%>
