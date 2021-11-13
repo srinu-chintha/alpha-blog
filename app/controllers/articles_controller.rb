@@ -30,6 +30,7 @@ class ArticlesController<ApplicationController
 
     end
     def destroy
+        byebug
         @article.destroy
         flash[:notice]="Article is deleted successfully"
         redirect_to articles_path

@@ -1,3 +1,20 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.jubotron-background{
+    background-image:url("https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-size:cover;
+    height:70vh;
+}
+body {
+    height: 100vh;
+  }
+  
+  #page-content {
+    flex: 1 0 auto;
+    background-color:lightgrey;
+  }
+  .title{
+    text-decoration: none;
+  }
+  
