@@ -7,19 +7,6 @@
         <% end %>
     </ul>
 <% end %>
-
-<%= form_with(model: @article,local: true) do |f| %>
-    <p>
-    <%= f.label :title%></br>
-    <%= f.text_field :title%>
-    </p>
-    <p>
-    <%= f.label :description%></br>
-    <%= f.text_area :description%>
-    </p>
-    <p>
-    <%=f.submit%>
-    </p>
-<%end%>
+<%= render "form" %>
 <%= link_to "delete",article_path(@article),method: :delete,data: {confirm: "are you sure?"} %> |
 <%= link_to "Return",articles_path%>
