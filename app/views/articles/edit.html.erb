@@ -1,12 +1,4 @@
-<h1>create a edit article</h1>
-<% if @article.errors.any? %>
-    <h1>The following errors prevented the article to save</h1>
-    <ul>
-        <% @article.errors.full_messages.each do |mesg| %>
-            <li><%= mesg %></li>
-        <% end %>
-    </ul>
-<% end %>
-<%= render "form" %>
-<%= link_to 'Delete',article_path(@article),method: :DELETE,data: { confirm: "Are you sure?" } %> |
-<%= link_to "Return",articles_path%>
+<div id="page-content">
+    <h1 class="text-center mt-5">Edit article</h1>
+    <%= render "form" %>
+</div>

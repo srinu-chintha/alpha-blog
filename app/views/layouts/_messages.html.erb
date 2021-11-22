@@ -1,3 +1,10 @@
-<% flash.each do |key,mesg| %>
-    <%= mesg%>
-<%end%>
+<div class="container">
+    <% flash.each do |key,mesg| %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= mesg%>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    <%end%>
+</div>
