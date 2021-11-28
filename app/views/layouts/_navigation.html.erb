@@ -20,7 +20,10 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled text-light">Disabled</a>
+        <%= link_to "login",login_path,class: "nav-link text-light"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "logout",logout_path,class: "nav-link text-light", method: :delete %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
