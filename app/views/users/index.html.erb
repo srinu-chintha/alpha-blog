@@ -15,9 +15,14 @@
                         <%= link_to gravator_for(user,size: 200),user_path(user),class: "text-success title"%>
                         </h5>
                         <p class="card-text"><%= pluralize(user.articles.count,"article")%></p>
-                        <% if logged_in? && user==curent_user%>
-                            <%= link_to "View profile",user_path(user),class: "btn btn-outline-success" %>
-                            <%= link_to "Edit profile" , edit_user_path(user), class: "btn btn-outline-success"%>
+                        <%= link_to "View profile",user_path(user),class: "btn btn-outline-success" %>
+                        <% if logged_in? %> 
+                            <% if user==curent_user %>
+                                <%= link_to "Edit profile" , edit_user_path(user), class: "btn btn-outline-success"%>
+                            <% end %>    
+                            <% if curent_user.admin? %>
+                                <%= link_to "Delete Profile" , user_path(user),method: :delete,data: {confirm: "are you sure?"}, class: "btn btn-outline-danger"%>
+                            <% end %>
                         <% end %>
                     </div>
                     <div class="card-footer text-muted">
